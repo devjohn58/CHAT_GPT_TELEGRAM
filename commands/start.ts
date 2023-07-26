@@ -5,7 +5,6 @@ import { showBotActivity } from "../actions/show-bot-activity";
 bot.command("start", async (ctx: Context) => {
 	if (!ctx.msg) return;
 	const chatId = ctx?.msg?.chat.id;
-	const msgId = ctx?.msg?.message_id;
 	const privateChat = ctx?.msg?.chat.type === "private";
 	const topicId = ctx.msg?.message_thread_id;
 	if (!privateChat) return;

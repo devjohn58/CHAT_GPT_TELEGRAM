@@ -14,7 +14,6 @@ bot.command("chat", async (ctx: Context) => {
 	const msg = ctx.update.message;
 	const msgId = msg?.message_id;
     const chatId = msg?.chat.id;
-    console.log(msg);
     
 	// Discard malformed messages
 	if (!msgId || !chatId) return;
